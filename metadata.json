@@ -1,0 +1,8 @@
+{
+  "name": "Remix AURA LAB — 3D Digital Creative Studio",
+  "description": "Award-winning creator and digital studio crafting memorable 3D web experiences, spatial design, motion, and creative technology.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

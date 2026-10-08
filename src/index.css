@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-pink: #FF69B4;
+    --brand-teal: #069494;
+    --brand-cyan: #00F0FF;
+    --brand-white: #FFFFFF;
+    --brand-bg: #021818;
+    --brand-surface: #042525;
+    --brand-surface-elevated: #073535;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--brand-bg);
+    color: #FFFFFF;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Syne', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Glassmorphism helpers with high contrast and restrained opacity */
+.glass-panel {
+  background: rgba(4, 37, 37, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 240, 255, 0.15);
+}
+
+.glass-panel-pink {
+  background: rgba(4, 37, 37, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 105, 180, 0.22);
+}
+
+.glass-header {
+  background: rgba(2, 24, 24, 0.78);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 240, 255, 0.12);
+}
+
+/* Subtle glow accents */
+.glow-pink-sm {
+  box-shadow: 0 0 20px -3px rgba(255, 105, 180, 0.35);
+}
+
+.glow-cyan-sm {
+  box-shadow: 0 0 20px -3px rgba(0, 240, 255, 0.35);
+}
+
+.glow-teal-sm {
+  box-shadow: 0 0 25px -4px rgba(6, 148, 148, 0.45);
+}
+
+.text-gradient-bubblegum {
+  background: linear-gradient(135deg, #FFFFFF 0%, #00F0FF 40%, #FF69B4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-pink {
+  background: linear-gradient(135deg, #FFFFFF 30%, #FF69B4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #FFFFFF 30%, #00F0FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #021818;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(6, 148, 148, 0.5);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00F0FF;
+}
+
+/* Accessibility: respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
